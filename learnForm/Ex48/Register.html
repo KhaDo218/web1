@@ -1,0 +1,154 @@
+<html>
+    <head>
+        <title>Register</title>
+        <style>
+            body{
+                background-color: #99ccff;
+                text-align: center;
+            }
+            table{
+                width: 850px;
+                padding: 10px;
+                margin: auto;
+                text-align: left;
+            }
+            caption{
+                font-size: 18px;
+                padding-bottom: 15px;
+                text-align: center;
+            }
+            td{
+                padding: 5px 10px;
+                white-space: nowrap;
+                vertical-align: top;
+            }
+            .gachngang td,
+            td.gachngang{
+                border-bottom: 1px solid #000000;
+            }
+            .short-input{
+                width: 150px;
+            }
+            .long-input{
+                width: 100%;
+            }
+        </style>
+    </head>
+    <body>
+        <img src="Bai48/hinh/Jackson.gif" alt="Jackson Electronics">
+        <h1>Registration Form</h1>
+        <form action="register_action.html" method="post">
+            <table>
+                <caption>Register your Jackson Electronics product here</caption>
+                <tr>
+                    <td><label for="fname">First Name:</label></td>
+                    <td><input type="text" id="fname" name="fname" class="short-input"></td>
+                    <td><label for="lname">Last Name:</label></td>
+                    <td><input type="text" id="lname" name="lname" class="short-input"></td>
+                    <td colspan="2"></td>
+                </tr>
+                <tr>
+                    <td><label for="addr1">Address #1:</label></td>
+                    <td colspan="5"><input type="text" id="addr1" name="addr1" class="long-input"></td>
+                </tr>
+                <tr>
+                    <td><label for="addr2">Address #2:</label></td>
+                    <td colspan="5"><input type="text" id="addr2" name="addr2" class="long-input"></td>
+                </tr>
+                <tr>
+                    <td><label for="city">City:</label></td>
+                    <td><input type="text" id="city" name="city" class="short-input"></td>
+                    <td><label for="state">State:</label></td>
+                    <td><input type="text" id="state" name="state" class="short-input"></td>
+                    <td><label for="zip">Zip:</label></td>
+                    <td><input type="number" id="zip" name="zip" class="short-input"></td>
+                </tr>
+                <tr class="gachngang">
+                    <td><label for="country">Country:</label></td>
+                    <td colspan="5"><input type="text" id="country" name="country" value="United States" class="short-input"></td>
+                </tr>
+
+                <tr>
+                    <td><label for="product">Product:</label></td>
+                    <td colspan="5">
+                        <select id="product" name="product">
+                            <option value="ScanMaster" selected>ScanMaster</option>
+                            <option value="TV65">TV 65inch</option>
+                            <option value="Asus">Laptop Asus VivoBook 2024</option>
+                            <option value="XiaoMi">XiaoMi 18 Pro Max</option>
+                            <option value="Redmi">Redmi Note 11 Pro</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="date">Date Purchased:</label></td>
+                    <td colspan="5"><input type="date" id="date" name="datePurchased"></td>
+                </tr>
+                <tr>
+                    <td><label for="serial">Serial #:</label></td>
+                    <td colspan="5"><input type="number" id="serial" name="serial"></td>
+                </tr>
+                <tr>
+                    <td rowspan="3" valign="top">Used for:</td>
+                    <td>
+                        <input type="radio" name="usedfor" id="home" value="Home">
+                        <label for="home">Home</label>
+                    </td>
+                    <td colspan="4">
+                        <input type="radio" name="usedfor" id="edu" value="Educational">
+                        <label for="edu">Educational Institution</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="radio" name="usedfor" id="business" value="Business" checked>
+                        <label for="business">Business</label>
+                    </td>
+                    <td colspan="4">
+                        <input type="radio" name="usedfor" id="other" value="Other">
+                        <label for="other">Other</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="5">
+                        <input type="radio" name="usedfor" id="gov" value="Government">
+                        <label for="gov">Government</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td rowspan="2" valign="top" class="gachngang">System (check all that apply):</td>
+                    <td>
+                        <input type="checkbox" name="sys_windows" id="win" value="Windows">
+                        <label for="win">Windows</label>
+                    </td>
+                    <td colspan="4">
+                        <input type="checkbox" name="sys_unix" id="unix" value="Unix">
+                        <label for="unix">UNIX</label>
+                    </td>
+                </tr>
+                <tr class="gachngang">
+                    <td>
+                        <input type="checkbox" name="sys_mac" id="mac" value="Macintosh">
+                        <label for="mac">Macintosh</label>
+                    </td>
+                    <td colspan="4">
+                        <input type="checkbox" name="sys_other" id="sysother" value="Other">
+                        <label for="sysother">Other</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top"><label for="comments">Comments?:</label></td>
+                    <td colspan="5">
+                        <textarea id="comments" name="comments" rows="8" cols="60"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="6" align="center" style="padding-top: 15px;">
+                        <input type="submit" value="Click to register">
+                        <input type="reset" value="Click to cancel">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>
