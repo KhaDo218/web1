@@ -1,0 +1,183 @@
+<html>
+    <head>
+        <title>Travel Expense Report</title>
+        <style type="text/css">
+            body {
+                background-color: rgb(195, 253, 253);
+            }
+            form {
+                width: 800px;
+                margin: 0 auto; 
+            }
+            img {
+                display: block;
+                margin: 0 auto;
+                max-width: 100%;
+            }
+            h1 {
+                font-size: 28px;
+                margin-bottom: 5px;
+            }
+            hr {
+                border: 0;
+                border-top: 1px solid #999;
+                margin-bottom: 20px;
+            }
+            input[type="text"], input[type="date"], select {
+                padding: 3px;
+            }
+            textarea {
+                width: 650px; 
+                height: 100px; 
+            }
+            table {
+                margin-top: 10px;
+                margin-bottom: 20px;
+                width: 100%; 
+                table-layout: fixed; 
+            }
+            th, td {
+                text-align: center; 
+                vertical-align: middle; 
+            }
+            td input[type="text"], 
+            td input[type="date"], 
+            td select {
+                width: 90%; 
+                box-sizing: border-box;
+                display: block;
+                margin: 0 auto;
+            }
+            input[type="submit"], input[type="reset"] {
+                padding: 3px 8px;
+                margin-right: 5px;
+                cursor: pointer;
+            }
+            .footer-text {
+                margin-top: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <form action="ketqua.html" method="get">
+            <img src="Bai50/DeLong.jpg" name="DeLongEnterprises" alt="DeLong Enterprises Logo">
+            
+            <h1>Travel Expense Report</h1>
+            <hr>
+            
+            <p> 
+                <label for="firstName">1) First Name:</label>
+                <input id="firstName" type="text" name="firstName">
+                <label for="lastName" style="margin-left: 10px;">Last Name:</label>
+                <input id="lastName" type="text" name="lastName">
+            </p>
+            <p>
+                <label for="SSN">2) Social Security Number:</label>
+                <input id="SSN" type="text" name="SSN">
+            </p>
+            <p>
+                <label for="department">3) Department:</label>
+                <select id="department" name="department">
+                    <option value="accounting" selected>Accounting</option>
+                    <option value="sales">Sales</option>
+                    <option value="marketing">Marketing</option>
+                    <option value="engineering">Engineering</option>
+                </select>
+            </p>
+            <p>
+                <label for="tripPurpose">4) Describe the purpose of your trip:</label>
+            </p>
+            <textarea name="tripPurpose" id="tripPurpose"></textarea>
+            <p>5) Itemize your travel expenses:</p>
+            <table border="1">
+                <colgroup>
+                    <col style="width: 15%;"> 
+                    <col style="width: 55%;">
+                    <col style="width: 18%;"> 
+                    <col style="width: 12%;"> 
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Description</th>
+                        <th>Category</th>
+                        <th>Amount</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input type="date" name="date"></td>
+                        <td><input type="text" name="description" style="width: 60%;"></td>
+                        <td>
+                            <select name="category">
+                                <option value="airfare">Airfare</option>
+                                <option value="lodging">Lodging</option>
+                                <option value="meals" selected>Meal</option>
+                                <option value="transportation">Transportation</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </td>
+                        <td><input type="text" name="amount" style="width: 70%;"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="date" name="date"></td>
+                        <td><input type="text" name="description" style="width: 60%;"></td>
+                        <td>
+                            <select name="category">
+                                <option value="airfare">Airfare</option>
+                                <option value="lodging">Lodging</option>
+                                <option value="meals" selected>Meal</option>
+                                <option value="transportation">Transportation</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </td>
+                        <td><input type="text" name="amount" style="width: 70%;"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="date" name="date"></td>
+                        <td><input type="text" name="description" style="width: 60%;"></td>
+                        <td>
+                            <select name="category">
+                                <option value="airfare">Airfare</option>
+                                <option value="lodging">Lodging</option>
+                                <option value="meals" selected>Meal</option>
+                                <option value="transportation">Transportation</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </td>
+                        <td><input type="text" name="amount" style="width: 70%;"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="date" name="date"></td>
+                        <td><input type="text" name="description" style="width: 60%;"></td>
+                        <td>
+                            <select name="category">
+                                <option value="airfare">Airfare</option>
+                                <option value="lodging">Lodging</option>
+                                <option value="meals" selected>Meal</option>
+                                <option value="transportation">Transportation</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </td>
+                        <td><input type="text" name="amount" style="width: 70%;"></td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <p>
+                6) Have you submitted your receipts? 
+                <input type="radio" id="yes" name="receipts" value="yes">
+                <label for="yes">Yes</label>
+                <input type="radio" id="no" name="receipts" value="no">
+                <label for="no">No</label>
+            </p>
+            
+            <p>
+                <input type="submit" value="Submit travel expense">
+                <input type="reset" value="Reset">
+            </p>
+            
+            <p class="footer-text">Questions? Contact Debbie Larson in Accounting (ext. 2150).</p>
+        </form>
+    </body>
+</html>
